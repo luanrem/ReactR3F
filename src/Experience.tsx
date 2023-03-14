@@ -1,12 +1,11 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
 
 export default function Experience() {
   return (
     <>
-      <mesh>
-        <torusKnotGeometry />
-        <meshNormalMaterial />
+      <mesh rotation-y={Math.PI * 0.25} position-x={2} scale={1.5}>
+        <boxGeometry />
+        <meshBasicMaterial color="mediumpurple" wireframe />
       </mesh>
     </>
   );
