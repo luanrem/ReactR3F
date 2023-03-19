@@ -16,10 +16,10 @@ export default function Experience() {
     // console.log(state.camera.position)
     // console.log(state.clock.elapsedTime)
 
-    const angle = state.clock.elapsedTime
-    state.camera.position.x = Math.sin(angle) * 8
-    state.camera.position.z = Math.cos(angle) * 8
-    state.camera.lookAt(0, 0, 0)
+    // const angle = state.clock.elapsedTime
+    // state.camera.position.x = Math.sin(angle) * 8
+    // state.camera.position.z = Math.cos(angle) * 8
+    // state.camera.lookAt(0, 0, 0)
 
     cubeRef.current.rotation.y += delta
     // groupRef.current.rotation.y += delta
@@ -27,7 +27,7 @@ export default function Experience() {
 
   return (
     <>
-      {/* <orbitControls args={[camera, gl.domElement]} /> */}
+      <orbitControls args={[camera, gl.domElement]} />
 
       <directionalLight position={[1, 2, 3]} intensity={1.5} />
       <ambientLight intensity={0.5} />
@@ -46,6 +46,12 @@ export default function Experience() {
         <planeGeometry />
         <meshStandardMaterial color="greenyellow" />
       </mesh>
+      <group position={[0, -1, 0]}>
+        <mesh position-y={2}>
+          <boxGeometry />
+          <meshBasicMaterial color={'#00ffff'} />
+        </mesh>
+      </group>
 
       <CustomObject />
     </>

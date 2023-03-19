@@ -2,6 +2,7 @@ import './style.css'
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience'
+import { ACESFilmicToneMapping, LinearEncoding } from 'three'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -14,6 +15,12 @@ const cameraSettings = {
 
 root.render(
     <Canvas
+        dpr={[1, 2]}
+        gl={{
+            antialias: true,
+            toneMapping: ACESFilmicToneMapping,
+            // outputEncoding: LinearEncoding
+        }}
         camera={cameraSettings}
     >
         <Experience />
