@@ -1,4 +1,4 @@
-import { Html, PivotControls, OrbitControls, TransformControls } from '@react-three/drei'
+import { Text, Html, PivotControls, OrbitControls, TransformControls } from '@react-three/drei'
 import { useRef } from 'react'
 
 export default function Experience() {
@@ -28,7 +28,6 @@ export default function Experience() {
           wrapperClass="label"
           center
           distanceFactor={6}
-          occlude={[sphere, cube]}
         >
           That's a sphere
         </Html>
@@ -46,6 +45,16 @@ export default function Experience() {
       <meshStandardMaterial color="greenyellow" />
     </mesh>
 
+    <Text
+      font='./bangers-v20-latin-regular.woff'
+      color="salmon"
+      fontSize={1}
+      position-y={2}
+      textAlign="center"
+    >
+      I Love R3F
+      <meshNormalMaterial />
+    </Text>
 
   </>
 }
