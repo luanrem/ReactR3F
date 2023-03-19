@@ -1,4 +1,4 @@
-import { Text, Html, PivotControls, OrbitControls, TransformControls } from '@react-three/drei'
+import { Float, Text, Html, PivotControls, OrbitControls, TransformControls } from '@react-three/drei'
 import { useRef } from 'react'
 
 export default function Experience() {
@@ -45,16 +45,21 @@ export default function Experience() {
       <meshStandardMaterial color="greenyellow" />
     </mesh>
 
-    <Text
-      font='./bangers-v20-latin-regular.woff'
-      color="salmon"
-      fontSize={1}
-      position-y={2}
-      textAlign="center"
+    <Float
+      speed={5}
+      floatIntensity={2}
     >
-      I Love R3F
-      <meshNormalMaterial />
-    </Text>
+      <Text
+        font='./bangers-v20-latin-regular.woff'
+        color="salmon"
+        fontSize={1}
+        position-y={2}
+        textAlign="center"
+      >
+        I Love R3F
+        <meshNormalMaterial />
+      </Text>
+    </Float>
 
   </>
 }
