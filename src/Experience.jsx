@@ -1,6 +1,12 @@
 import { OrbitControls } from '@react-three/drei'
+import { useControls } from 'leva'
 
 export default function Experience() {
+  const controls = useControls({
+    position: - 2
+  })
+  console.log(controls)
+
   return <>
 
     <OrbitControls makeDefault />
