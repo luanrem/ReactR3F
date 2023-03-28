@@ -4,14 +4,10 @@ import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three'
 import Experience from './Experience.jsx'
 
+
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
-const created = (state) => {
-    // console.log('created', state.gl)
-    state.gl.setClearColor('#ff0000', 1)
-    console.log('scene', state.scene)
-    state.scene.background = new THREE.Color('red')
-}
+new THREE.Color('red')
 
 root.render(
     <Canvas
@@ -21,7 +17,6 @@ root.render(
             far: 200,
             position: [- 4, 3, 6]
         }}
-        onCreated={created}
     >
         <Experience />
     </Canvas>
